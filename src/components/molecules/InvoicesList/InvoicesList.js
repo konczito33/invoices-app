@@ -6,8 +6,9 @@ import { StyledList } from './InvoicesList.styles';
 
 import Center from 'styles/Center/Center';
 const InvoicesList = () => {
-  const { state, dispatch } = useInvoices();
+  const { state } = useInvoices();
   const { filteredInvoices } = state;
+  console.log(state);
   return (
     <Center>
       <StyledList>

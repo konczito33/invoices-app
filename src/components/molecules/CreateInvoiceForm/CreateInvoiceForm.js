@@ -28,6 +28,7 @@ export default function CreateInvoiceForm({ setIsCreateModalOpen }) {
   const closeModal = () => {
     setIsCreateModalOpen();
   };
+
   return (
     <Formik
       initialValues={initialValue}

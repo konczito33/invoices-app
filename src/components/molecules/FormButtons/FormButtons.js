@@ -50,7 +50,7 @@ export default function FormButtons({ dispatch, isSubmitting, closeModal, values
         >
           Save as Draft
         </StyledDraftButton>
-        <StyledSaveButton color="#fff" type="submit" disabled={isSubmitting}>
+        <StyledSaveButton autoFocus={true} color="#fff" type="submit" disabled={isSubmitting}>
           Save & Send
         </StyledSaveButton>
       </StyledButtonsWrapper>
