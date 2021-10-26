@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 const Wrapper = styled.div`
-  position: absolute;
-  top: 100px;
+  top: 70px;
   max-width: 90%;
-  width: 800px;
-  /* height: 100%; */
+  width: 700px;
+  margin-top: 40px;
   display: flex;
+  align-self: center;
+  justify-self: center;
   flex-direction: column;
-  margin-left: 100px;
+  padding-bottom: 50px;
+  height: 100vh;
 `;
 
 export default Wrapper;

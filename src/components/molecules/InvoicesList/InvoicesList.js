@@ -2,24 +2,20 @@ import React from 'react';
 
 import { useInvoices } from 'contexts/InvoicesContext';
 import InvoicesItem from 'components/molecules/Invoicesitem/InvoicesItem';
+import { StyledList } from './InvoicesList.styles';
 
+import Center from 'styles/Center/Center';
 const InvoicesList = () => {
   const { state, dispatch } = useInvoices();
-  const { invoices } = state;
-  const removeItemHandler = () =>
-    dispatch({
-      type: 'REMOVE_ITEM',
-      payload: 'FV2353',
-    });
+  const { filteredInvoices } = state;
   return (
-    <div>
-      <ul>
-        <button onClick={removeItemHandler}>REMOVE</button>
-        {invoices.map((item) => {
-          return <InvoicesItem item={item}></InvoicesItem>;
+    <Center>
+      <StyledList>
+        {filteredInvoices.map((item) => {
+          return <InvoicesItem key={item.id} item={item}></InvoicesItem>;
         })}
-      </ul>
-    </div>
+      </StyledList>
+    </Center>
   );
 };
 

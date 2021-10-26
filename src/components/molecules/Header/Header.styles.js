@@ -4,6 +4,7 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
   .invoices-info {
     h1 {
       margin: 0;
@@ -21,8 +22,8 @@ export const StyledHeader = styled.header`
     }
   }
   .header-buttons {
+    width: 280px;
     display: flex;
     justify-content: space-between;
-    width: 220px;
   }
 `;
