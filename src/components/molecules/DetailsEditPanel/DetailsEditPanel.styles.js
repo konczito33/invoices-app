@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from 'styles/Button/Button';
 export const StyledPanel = styled.div`
   display: flex;
   align-items: center;
@@ -16,7 +17,7 @@ export const StyledPanel = styled.div`
   .buttons {
     display: flex;
     flex: 1;
-    gap: 5px;
+    gap: 15px;
     justify-content: flex-end;
   }
 `;
@@ -24,4 +25,10 @@ export const StyledPanel = styled.div`
 export const StyledBackButton = styled.div`
   font-size: ${({ theme }) => theme.fonts.s};
   color: ${({ theme }) => theme.mainFontColor};
+`;
+
+export const StyledPaidButton = styled(Button)`
+  background-color: ${({ theme }) => theme.purple};
+  color: #fff;
+  padding: 0 16px;
 `;

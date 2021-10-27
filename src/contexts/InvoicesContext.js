@@ -37,6 +37,15 @@ export const InvoicesProvider = ({ children }) => {
         setFilteredInvoices(arr);
         setInvoices(arr);
         return { ...state, invoices: arr, filteredInvoices: arr };
+      case 'markAsPaid':
+        const changingItem = invoices.filter((item) => item.id === payload);
+        const index = invoices.findIndex((obj) => obj.id === payload);
+        changingItem[0].status = 'paid';
+        const newArray = [...invoices];
+        newArray[index] = changingItem[0];
+        setInvoices(newArray);
+        setFilteredInvoices(newArray);
+        return { ...state, filteredInvoices: newArray };
       case 'null':
         setFilteredInvoices(invoices);
         return { ...state, filteredInvoices: invoices };

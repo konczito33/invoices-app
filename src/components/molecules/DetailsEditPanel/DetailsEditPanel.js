@@ -5,8 +5,11 @@ import { StyledBackButton } from './DetailsEditPanel.styles';
 import Chevron from 'assets/chevron-down.svg';
 import Button from 'styles/Button/Button';
 import { useInvoices } from 'contexts/InvoicesContext';
-const DetailsEditPanel = ({ status }) => {
-  const { setIsDeleteModalOpen } = useInvoices();
+import { useCurrentInvoice } from 'hooks/useCurrentInvoice';
+import { StyledPaidButton } from './DetailsEditPanel.styles';
+const DetailsEditPanel = () => {
+  const { setIsDeleteModalOpen, dispatch } = useInvoices();
+  const { status, id } = useCurrentInvoice();
   return (
     <div>
       <Link
@@ -37,6 +40,15 @@ const DetailsEditPanel = ({ status }) => {
           >
             Delete
           </Button>
+          {status !== 'paid' ? (
+            <StyledPaidButton
+              onClick={() => {
+                dispatch({ type: 'markAsPaid', payload: id });
+              }}
+            >
+              Mark as paid
+            </StyledPaidButton>
+          ) : null}
         </div>
       </StyledPanel>
     </div>
