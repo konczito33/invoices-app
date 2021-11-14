@@ -34,6 +34,8 @@ export const lightTheme = {
   draftBtnColor: 'rgb(136, 142, 176)',
   draftBtnBg: 'rgb(12, 14, 22)',
   discardBtnColor: 'rgb(126, 136, 195)',
+  itemsButton: 'rgb(249, 250, 254)',
+  itemsButtonColor: 'rgb(37, 41, 69)',
 };
 export const darkTheme = {
   bodyColor: 'rgb(20, 22, 37)',
@@ -71,4 +73,6 @@ export const darkTheme = {
   draftBtnColor: 'rgb(136, 142, 176)',
   draftBtnBg: 'rgb(37, 41, 69)',
   discardBtnColor: 'rgb(223, 227, 250)',
+  itemsButton: 'rgb(37, 41, 69)',
+  itemsButtonColor: 'rgb(37, 41, 69)',
 };

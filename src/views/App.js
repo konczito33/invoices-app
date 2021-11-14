@@ -8,6 +8,8 @@ import Template from 'templates/Template';
 import { ThemeContextProvider } from 'contexts/ThemeContext';
 import InvoiceDetails from 'components/organisms/Invoices/InvoiceDetails';
 import CreateInvoiceModal from 'components/organisms/Invoices/CreateInvoiceModal/CreateInvoiceModal';
+import EditInvoiceModal from 'components/molecules/EditInvoiceModal/EditInvoiceModal';
+import { AnimatePresence } from 'framer-motion';
 function App() {
   return (
     <ThemeContextProvider>
@@ -16,12 +18,17 @@ function App() {
         <Router>
           <Switch>
             <Template>
-              <Route exact path="/">
-                <Invoices />
-                <CreateInvoiceModal />
-              </Route>
+              <AnimatePresence>
+                <Route exact path="/">
+                  <Invoices />
+                  <CreateInvoiceModal />
+                </Route>
+              </AnimatePresence>
               <Route path="/invoices/:id">
                 <InvoiceDetails />
+                <AnimatePresence>
+                  <EditInvoiceModal />
+                </AnimatePresence>
               </Route>
             </Template>
           </Switch>

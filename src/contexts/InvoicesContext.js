@@ -7,7 +7,7 @@ import data from 'data/data.json';
 export const InvoicesContext = React.createContext();
 
 export const InvoicesProvider = ({ children }) => {
-  const [invoices, setInvoices] = useLocalStorage('invoices', data);
+  const [invoices, setInvoices] = useLocalStorage('invoices', []);
   const [filteredInvoices, setFilteredInvoices] = useLocalStorage('filteredInvoices', []);
   const initialState = { invoices, filteredInvoices };
   const reducer = (state, action) => {
@@ -46,6 +46,14 @@ export const InvoicesProvider = ({ children }) => {
         setInvoices(newArray);
         setFilteredInvoices(newArray);
         return { ...state, filteredInvoices: newArray };
+      case 'editInvoice':
+        const idx = invoices.findIndex((obj) => obj.id === payload.id);
+        const editedArr = [...invoices];
+        editedArr[idx] = payload.values;
+        setInvoices(editedArr);
+        setFilteredInvoices(editedArr);
+        return { ...state, filteredInvoices: editedArr, invoices: editedArr };
+
       case 'null':
         setFilteredInvoices(invoices);
         return { ...state, filteredInvoices: invoices };
@@ -60,6 +68,7 @@ export const InvoicesProvider = ({ children }) => {
   ];
   const [options, setOptions] = React.useState(initOptions);
   const [isCreateModalOpen, setIsCreateModalOpen] = React.useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = React.useState(false);
   const [filter, setFilter] = React.useState('null');
   const [currentInvoice, setCurrentInvoice] = React.useState(null);
   const [state, dispatch] = React.useReducer(reducer, initialState);
@@ -79,6 +88,8 @@ export const InvoicesProvider = ({ children }) => {
         setIsCreateModalOpen,
         isDeleteModalOpen,
         setIsDeleteModalOpen,
+        isEditModalOpen,
+        setIsEditModalOpen,
       }}
     >
       {children}

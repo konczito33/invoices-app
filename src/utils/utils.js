@@ -28,3 +28,8 @@ export function formatDate(date) {
 
   return [year, month, day].join('-');
 }
+export const getTotal = (items) => {
+  const totalValues = items.map((i) => i.total);
+  const total = totalValues.reduce((prev, curr) => prev + curr);
+  return total;
+};

@@ -7,11 +7,14 @@ import Button from 'styles/Button/Button';
 import { useInvoices } from 'contexts/InvoicesContext';
 import { useCurrentInvoice } from 'hooks/useCurrentInvoice';
 import { StyledPaidButton } from './DetailsEditPanel.styles';
+import { motion } from 'framer-motion';
 const DetailsEditPanel = () => {
   const { setIsDeleteModalOpen, dispatch } = useInvoices();
   const { status, id } = useCurrentInvoice();
+  const { setIsEditModalOpen } = useInvoices();
+  const handleOpenEditModal = () => setIsEditModalOpen(true);
   return (
-    <div>
+    <motion.div initial={{ y: -100 }} animate={{ y: 0 }}>
       <Link
         to="/"
         onClick={() => {
@@ -27,7 +30,7 @@ const DetailsEditPanel = () => {
         <p>Status</p>
         <Status status={status} />
         <div className="buttons">
-          <Button isWide bgColor={({ theme }) => theme.editBtnBgColor} color={({ theme }) => theme.editBtnColor}>
+          <Button onClick={handleOpenEditModal} isWide bgColor={({ theme }) => theme.editBtnBgColor} color={({ theme }) => theme.editBtnColor}>
             Edit
           </Button>
           <Button
@@ -51,7 +54,7 @@ const DetailsEditPanel = () => {
           ) : null}
         </div>
       </StyledPanel>
-    </div>
+    </motion.div>
   );
 };
 

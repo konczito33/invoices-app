@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const StyledDetails = styled.div`
+export const StyledDetails = styled(motion.div)`
   background-color: ${({ theme }) => theme.itemColor};
   padding: 10px 25px;
   border-radius: 10px;

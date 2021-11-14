@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-const StyledSideBar = styled.aside`
+import { motion } from 'framer-motion';
+const StyledSideBar = styled(motion.aside)`
   position: fixed;
   top: 0;
   left: 0;

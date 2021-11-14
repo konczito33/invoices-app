@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledItem = styled.li`
+export const StyledItem = styled(motion.li)`
   box-sizing: border-box;
   width: 100%;
   display: grid;

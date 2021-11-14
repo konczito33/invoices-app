@@ -5,7 +5,7 @@ const DetailsInfo = () => {
   const { city, country, postCode, street } = clientAddress;
   const { city: cityS, country: countryS, postCode: postCodeS, street: streetS } = senderAddress;
   return (
-    <StyledDetails>
+    <StyledDetails initial={{ y: -100 }} animate={{ y: 0 }}>
       <div className="top">
         <div>
           <h3 className="id">
@@ -55,10 +55,10 @@ const DetailsInfo = () => {
             <th className="t-price">Price</th>
             <th style={{ textAlign: 'right' }}>Total</th>
           </tr>
-          {items.map(({ name, price, quantity, total }) => (
+          {items.map(({ name, price, qty, total }) => (
             <tr key={total}>
               <td className="t-name"> {name}</td>
-              <td className="t-qty">{quantity}</td>
+              <td className="t-qty">{qty}</td>
               <td className="t-price">${price}</td>
               <td className="t-total">${total}</td>
             </tr>

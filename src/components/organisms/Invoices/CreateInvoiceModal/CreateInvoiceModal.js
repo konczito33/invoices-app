@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import { useInvoices } from 'contexts/InvoicesContext';
 import CreateInvoiceForm from 'components/molecules/CreateInvoiceForm/CreateInvoiceForm';
 import { StyledOverlay } from 'components/atoms/DarkOverlay/DarkOverlay.styles';
+import { AnimatePresence, motion } from 'framer-motion';
 export default function CreateInvoiceModal() {
   const { isCreateModalOpen, setIsCreateModalOpen } = useInvoices();
 
   React.useEffect(() => {
     const body = document.body;
     isCreateModalOpen ? (body.style.overflow = 'hidden') : (body.style.overflow = 'unset');
+    window.scrollY = 0;
   }, [isCreateModalOpen]);
 
   const closeModalHandler = () => {

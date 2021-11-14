@@ -2,11 +2,25 @@ import CreatingButton from 'components/atoms/CreatingButton/CreatingButton';
 import { useInvoices } from 'contexts/InvoicesContext';
 import { StyledHeader } from './Header.styles';
 import Dropdown from '../Dropdown/Dropdown';
+
+const headerVariants = {
+  from: {
+    y: -100,
+  },
+  to: {
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 200,
+    },
+  },
+};
+
 const Header = () => {
   const { state, filter } = useInvoices();
   const { filteredInvoices } = state;
   return (
-    <StyledHeader>
+    <StyledHeader variants={headerVariants} initial="from" animate="to">
       <div className="invoices-info">
         <h1>Invoices</h1>
         <h2>

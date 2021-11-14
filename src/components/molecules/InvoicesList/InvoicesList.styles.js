@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-export const StyledList = styled.ul`
+import { motion } from 'framer-motion';
+export const StyledList = styled(motion.ul)`
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   list-style: none;
