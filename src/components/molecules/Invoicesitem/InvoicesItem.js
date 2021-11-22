@@ -21,7 +21,7 @@ const InvoicesItem = ({ item }) => {
   const { id, paymentDue, clientName, total, status } = item;
   const { isSm } = useBreakpoints();
   return (
-    <NavLink style={{ textDecoration: 'none', color: 'unset' }} to={`/invoices/${id}`}>
+    <NavLink style={{ textDecoration: 'none', color: 'unset' }} to={`/invoices-app/invoices/${id}`}>
       <StyledItem
         variants={itemVariants}
         onClick={() => {
