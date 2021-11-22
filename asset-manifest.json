@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/invoices-app/static/js/main.2ee02154.chunk.js",
-    "main.js.map": "/invoices-app/static/js/main.2ee02154.chunk.js.map",
-    "runtime-main.js": "/invoices-app/static/js/runtime-main.b566ffcb.js",
-    "runtime-main.js.map": "/invoices-app/static/js/runtime-main.b566ffcb.js.map",
-    "static/css/2.ecdd39c8.chunk.css": "/invoices-app/static/css/2.ecdd39c8.chunk.css",
-    "static/js/2.e5b1cf6f.chunk.js": "/invoices-app/static/js/2.e5b1cf6f.chunk.js",
-    "static/js/2.e5b1cf6f.chunk.js.map": "/invoices-app/static/js/2.e5b1cf6f.chunk.js.map",
-    "index.html": "/invoices-app/index.html",
-    "static/css/2.ecdd39c8.chunk.css.map": "/invoices-app/static/css/2.ecdd39c8.chunk.css.map",
-    "static/js/2.e5b1cf6f.chunk.js.LICENSE.txt": "/invoices-app/static/js/2.e5b1cf6f.chunk.js.LICENSE.txt",
-    "static/media/add.e45e602a.svg": "/invoices-app/static/media/add.e45e602a.svg",
-    "static/media/chevron-down.b1b62a28.svg": "/invoices-app/static/media/chevron-down.b1b62a28.svg",
-    "static/media/icon-calendar.71c99ab5.svg": "/invoices-app/static/media/icon-calendar.71c99ab5.svg",
-    "static/media/icon-delete.55a4f6bd.svg": "/invoices-app/static/media/icon-delete.55a4f6bd.svg",
-    "static/media/logo.56ed6813.svg": "/invoices-app/static/media/logo.56ed6813.svg",
-    "static/media/moon.f704e6c8.svg": "/invoices-app/static/media/moon.f704e6c8.svg",
-    "static/media/sun.79129fff.svg": "/invoices-app/static/media/sun.79129fff.svg"
+    "main.js": "/invoices-app/invoices/static/js/main.2ee02154.chunk.js",
+    "main.js.map": "/invoices-app/invoices/static/js/main.2ee02154.chunk.js.map",
+    "runtime-main.js": "/invoices-app/invoices/static/js/runtime-main.f04158e2.js",
+    "runtime-main.js.map": "/invoices-app/invoices/static/js/runtime-main.f04158e2.js.map",
+    "static/css/2.ecdd39c8.chunk.css": "/invoices-app/invoices/static/css/2.ecdd39c8.chunk.css",
+    "static/js/2.1e5ca2bf.chunk.js": "/invoices-app/invoices/static/js/2.1e5ca2bf.chunk.js",
+    "static/js/2.1e5ca2bf.chunk.js.map": "/invoices-app/invoices/static/js/2.1e5ca2bf.chunk.js.map",
+    "index.html": "/invoices-app/invoices/index.html",
+    "static/css/2.ecdd39c8.chunk.css.map": "/invoices-app/invoices/static/css/2.ecdd39c8.chunk.css.map",
+    "static/js/2.1e5ca2bf.chunk.js.LICENSE.txt": "/invoices-app/invoices/static/js/2.1e5ca2bf.chunk.js.LICENSE.txt",
+    "static/media/add.e45e602a.svg": "/invoices-app/invoices/static/media/add.e45e602a.svg",
+    "static/media/chevron-down.b1b62a28.svg": "/invoices-app/invoices/static/media/chevron-down.b1b62a28.svg",
+    "static/media/icon-calendar.71c99ab5.svg": "/invoices-app/invoices/static/media/icon-calendar.71c99ab5.svg",
+    "static/media/icon-delete.55a4f6bd.svg": "/invoices-app/invoices/static/media/icon-delete.55a4f6bd.svg",
+    "static/media/logo.56ed6813.svg": "/invoices-app/invoices/static/media/logo.56ed6813.svg",
+    "static/media/moon.f704e6c8.svg": "/invoices-app/invoices/static/media/moon.f704e6c8.svg",
+    "static/media/sun.79129fff.svg": "/invoices-app/invoices/static/media/sun.79129fff.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b566ffcb.js",
+    "static/js/runtime-main.f04158e2.js",
     "static/css/2.ecdd39c8.chunk.css",
-    "static/js/2.e5b1cf6f.chunk.js",
+    "static/js/2.1e5ca2bf.chunk.js",
     "static/js/main.2ee02154.chunk.js"
   ]
 }
