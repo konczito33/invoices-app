@@ -6,7 +6,8 @@ import DeleteInvoiceModal from 'components/molecules/DeleteInvoiceModal/DeleteIn
 import useBreakpoints from 'hooks/useBreakpoints';
 import DetailsEditButtons from 'components/atoms/DetailsEditButtons/DetailsEditButtons';
 const InvoiceDetails = () => {
-  const { status } = useCurrentInvoice();
+  // const { status } = useCurrentInvoice();
+  const status = 'pending';
   const { isSm, isMd } = useBreakpoints();
   return (
     <Wrapper style={{ width: '600px' }}>
