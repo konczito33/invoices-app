@@ -24,7 +24,7 @@ function App() {
                   <CreateInvoiceModal />
                 </Route>
               </AnimatePresence>
-              <Route path="invoices-app/invoices/:id">
+              <Route path="/invoices-app/invoices/:id">
                 <InvoiceDetails />
                 <AnimatePresence>
                   <EditInvoiceModal />
