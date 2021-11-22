@@ -3,7 +3,7 @@ export const GlobalStyles = createGlobalStyle`
 *{
     box-sizing: border-box;
 }
-html,body{
+html{
     @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap');
     font-family: 'Spartan', sans-serif;
     padding: 0;
