@@ -19,12 +19,12 @@ function App() {
           <Switch>
             <Template>
               <AnimatePresence>
-                <Route exact path="/">
+                <Route exact path="https://konczito33.github.io/invoices-app/">
                   <Invoices />
                   <CreateInvoiceModal />
                 </Route>
               </AnimatePresence>
-              <Route path="/invoices/:id">
+              <Route path="https://konczito33.github.io/invoices-app/invoices/:id">
                 <InvoiceDetails />
                 <AnimatePresence>
                   <EditInvoiceModal />
