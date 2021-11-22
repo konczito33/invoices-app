@@ -12,6 +12,9 @@ body{
     background-color: ${({ theme }) => theme.bodyColor};
     transition: .3s background-color;
     width: calc(100vw - 34px);
+    @media (max-width: 1025px) {
+    width: 100%;
+  }
 }
 button{
     font-family: inherit;

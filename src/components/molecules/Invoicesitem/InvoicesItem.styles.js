@@ -52,4 +52,24 @@ export const StyledItem = styled(motion.li)`
   &:hover {
     border: 1px solid ${({ theme }) => theme.purple};
   }
+  @media only screen and (max-width: 769px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 160px;
+    .total {
+      grid-row: 1/2;
+      padding: 0;
+    }
+    .due {
+      grid-row: 2/3;
+    }
+    .id {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    .name {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
 `;

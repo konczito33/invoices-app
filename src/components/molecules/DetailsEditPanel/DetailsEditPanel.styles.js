@@ -30,5 +30,5 @@ export const StyledBackButton = styled.div`
 export const StyledPaidButton = styled(Button)`
   background-color: ${({ theme }) => theme.purple};
   color: #fff;
-  padding: 0 16px;
+  padding: 12px 22px;
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import StyledSideBar from './SideBar.styles';
 import DarkmodeButton from 'components/atoms/DarkmodeButton/DarkmodeButton';
 import Logo from 'components/atoms/Logo/Logo';
+import useBreakpoints from 'hooks/useBreakpoints';
 
 const sideBarVariants = {
   from: {
@@ -14,8 +15,9 @@ const sideBarVariants = {
 };
 
 const SideBar = () => {
+  const { isSm, isMd } = useBreakpoints();
   return (
-    <StyledSideBar variants={sideBarVariants} initial="from" animate="to">
+    <StyledSideBar isSmall={isSm || isMd} variants={sideBarVariants} initial="from" animate="to">
       <Logo />
       <DarkmodeButton />
     </StyledSideBar>

@@ -3,7 +3,7 @@ const Wrapper = styled.div`
   top: 70px;
   max-width: 90%;
   width: 700px;
-  margin-top: 40px;
+  margin: 40px 0;
   display: flex;
   align-self: center;
   justify-self: center;

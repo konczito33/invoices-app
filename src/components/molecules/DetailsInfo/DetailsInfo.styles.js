@@ -90,4 +90,23 @@ export const StyledDetails = styled(motion.div)`
       }
     }
   }
+  @media (max-width: 769px) {
+    .top {
+      flex-direction: column;
+      justify-content: flex-start;
+      .sender-adress {
+        text-align: left;
+      }
+    }
+    .mid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .person-info {
+      text-align: right;
+    }
+  }
 `;

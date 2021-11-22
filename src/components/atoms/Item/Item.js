@@ -9,6 +9,18 @@ const StyledItemWrapper = styled.div`
   align-items: center;
   grid-template-columns: 150px repeat(3, 70px);
   justify-content: space-between;
+  @media (max-width: 769px) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 30px 100px 100px;
+    .item-qty {
+      grid-column: 1/2;
+    }
+    .item-name {
+      grid-column: 1/6;
+      width: 100%;
+    }
+  }
 `;
 
 const StyledButton = styled.button`
@@ -34,10 +46,10 @@ export default function Item({ i, remove }) {
   }, [values, i, setFieldValue]);
   return (
     <StyledItemWrapper>
-      <FormInput label={'Name'} name={`items[${i}].name`} />
-      <FormInput label={'Qty'} name={`items[${i}].qty`} />
-      <FormInput label={'Price'} name={`items[${i}].price`} />
-      <FormInput disabled label={'total'} name={`items[${i}].total`} />
+      <FormInput className="item-name" label={'Name'} name={`items[${i}].name`} />
+      <FormInput className="item-qty" label={'Qty'} name={`items[${i}].qty`} />
+      <FormInput className="item-price" label={'Price'} name={`items[${i}].price`} />
+      <FormInput className="item-total" disabled label={'total'} name={`items[${i}].total`} />
       <StyledButton onClick={() => remove(i)} type="button">
         <img src={Delete} alt="" />
       </StyledButton>

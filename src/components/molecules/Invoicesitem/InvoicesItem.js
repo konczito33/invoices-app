@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { StyledItem } from './InvoicesItem.styles';
 import Status from 'components/atoms/Status/Status';
 import Chevron from 'assets/chevron-down.svg';
+import useBreakpoints from 'hooks/useBreakpoints';
 
 const itemVariants = {
   from: {
@@ -18,6 +19,7 @@ const itemVariants = {
 const InvoicesItem = ({ item }) => {
   const { setCurrentInvoice } = useInvoices();
   const { id, paymentDue, clientName, total, status } = item;
+  const { isSm } = useBreakpoints();
   return (
     <NavLink style={{ textDecoration: 'none', color: 'unset' }} to={`/invoices/${id}`}>
       <StyledItem
@@ -41,7 +43,7 @@ const InvoicesItem = ({ item }) => {
           {total}
         </p>
         <Status status={status} />
-        <img src={Chevron} alt="" />
+        {isSm ? null : <img src={Chevron} alt="" />}
       </StyledItem>
     </NavLink>
   );

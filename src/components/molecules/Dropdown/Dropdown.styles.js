@@ -4,6 +4,7 @@ export const StyledDropdown = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 10;
   ul {
     list-style: none;
     position: absolute;

@@ -10,4 +10,7 @@ export const StyledList = styled(motion.ul)`
   margin: 0;
   padding: 0;
   gap: 20px;
+  @media (max-width: 769px) {
+    margin-bottom: 50px;
+  }
 `;

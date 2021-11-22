@@ -2,6 +2,7 @@ import CreatingButton from 'components/atoms/CreatingButton/CreatingButton';
 import { useInvoices } from 'contexts/InvoicesContext';
 import { StyledHeader } from './Header.styles';
 import Dropdown from '../Dropdown/Dropdown';
+import useBreakpoints from 'hooks/useBreakpoints';
 
 const headerVariants = {
   from: {
@@ -19,8 +20,9 @@ const headerVariants = {
 const Header = () => {
   const { state, filter } = useInvoices();
   const { filteredInvoices } = state;
+  const { isSm, isXs } = useBreakpoints();
   return (
-    <StyledHeader variants={headerVariants} initial="from" animate="to">
+    <StyledHeader isXs={isXs} isSmall={isSm} variants={headerVariants} initial="from" animate="to">
       <div className="invoices-info">
         <h1>Invoices</h1>
         <h2>

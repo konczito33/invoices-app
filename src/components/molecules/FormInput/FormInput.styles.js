@@ -4,6 +4,9 @@ const StyledFormInput = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  @media (max-width: 769px) {
+    margin: 10px 0;
+  }
   input {
     font-weight: bold;
     height: 40px;

@@ -1,8 +1,10 @@
 import logosvg from 'assets/logo.svg';
 import styled from 'styled-components';
+import useBreakpoints from 'hooks/useBreakpoints';
 const Logo = () => {
+  const { isSm, isMd } = useBreakpoints();
   return (
-    <StyledLogo>
+    <StyledLogo isSmall={isSm || isMd}>
       <img src={logosvg} alt="" />
     </StyledLogo>
   );
@@ -17,6 +19,13 @@ const StyledLogo = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0px 20px 20px 0px;
+
+  ${({ isSmall }) =>
+    isSmall &&
+    `
+   width: 60px;
+    height: 100%;
+  `}
 
   &::before {
     content: '';

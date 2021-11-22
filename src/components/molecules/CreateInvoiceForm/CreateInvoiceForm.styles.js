@@ -12,6 +12,10 @@ export const StyledInvoiceFormWrapper = styled(Form)`
   height: 100vh;
   z-index: 10;
   transition: 0.3s background-color;
+  @media (max-width: 1025px) {
+    width: 100%;
+    padding: 50px 0 0 0;
+  }
 `;
 
 export const StyledTemplate = styled.div`
@@ -27,23 +31,24 @@ export const StyledTemplate = styled.div`
 `;
 
 export const StyledFormContainer = styled.div`
-  margin: 20px 0 ;
+  margin: 20px 0;
   padding-right: 50px;
   overflow-y: scroll;
   flex: 0.7;
-  h3{
-    margin-bottom: 10px ;
+  h3 {
+    margin-bottom: 10px;
     font-size: ${({ theme }) => theme.fonts.s};
     color: ${({ theme }) => theme.purple};
   }
 
+  @media (max-width: 1025px) {
+    padding-right: 0px;
   }
   .buttons {
     height: 70px;
     display: flex;
     align-items: center;
-
-
+  }
 `;
 
 export const StyledPaymentRow = styled.div`
@@ -57,5 +62,11 @@ export const StyledRow = styled.div`
   justify-content: space-between;
   input {
     width: 150px;
+  }
+  @media (max-width: 769px) {
+    flex-direction: column;
+    input {
+      width: 100%;
+    }
   }
 `;

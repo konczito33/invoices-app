@@ -7,7 +7,7 @@ export const validationSchema = Yup.object().shape({
     country: Yup.string().required('This field is required'),
     postCode: Yup.string().required('This field is required'),
   }),
-  clientName: Yup.string().required('This field is required'),
+  clientName: Yup.string().required('This field is required').max(20, 'Max 20 char'),
   clientEmail: Yup.string().required('This field is required').email('Type correct email'),
   senderAddress: Yup.object().shape({
     city: Yup.string().required('This field is required'),
@@ -16,7 +16,6 @@ export const validationSchema = Yup.object().shape({
     street: Yup.string().required('This field is required'),
   }),
   createdAt: Yup.string().required('This field is required'),
-  // total: Yup.number().required('This field is required'),
   items: Yup.array().of(
     Yup.object().shape({
       name: Yup.string().required('This field is required'),

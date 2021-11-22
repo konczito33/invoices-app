@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledDropdownItem = styled.li`
   display: flex;
   align-items: center;
+
   input {
     margin-right: 16px;
     appearance: none;

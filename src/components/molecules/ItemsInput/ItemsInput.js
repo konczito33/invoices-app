@@ -20,6 +20,11 @@ const StyledHeader = styled.h3`
   padding: 10px 0;
 `;
 
+const StyledWrapper = styled.div`
+  background-color: red;
+  display: grid;
+`;
+
 export default function ItemsInput({ values, index }) {
   return (
     <div>

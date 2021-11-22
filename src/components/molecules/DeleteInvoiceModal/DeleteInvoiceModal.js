@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Button, { StyledButton } from 'styles/Button/Button';
+import Button from 'styles/Button/Button';
 
 import { useHistory } from 'react-router';
 import { useInvoices } from 'contexts/InvoicesContext';
@@ -27,9 +27,13 @@ const StyledWrapper = styled.div`
   z-index: 100;
   background-color: ${({ theme }) => theme.itemColor};
   height: 220px;
+  max-width: 90%;
   width: 450px;
   padding: 35px 45px;
   border-radius: 10px;
+  @media (max-width: 768px) {
+    position: fixed;
+  }
 `;
 const StyledHeader = styled.h3`
   color: ${({ theme }) => theme.mainFontColor};

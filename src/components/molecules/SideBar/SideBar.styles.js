@@ -15,6 +15,18 @@ const StyledSideBar = styled(motion.aside)`
   border-radius: 0px 20px 20px 0px;
   align-self: start;
   z-index: 100;
+
+  ${({ isSmall }) =>
+    isSmall &&
+    `
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    border-radius: 0;
+    
+  `}
 `;
 
 export default StyledSideBar;

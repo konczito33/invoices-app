@@ -1,6 +1,6 @@
 const { default: styled } = require('styled-components');
 
-const Center = ({ children }) => <StyledCenter>{children}</StyledCenter>;
+const Center = ({ children, ...rest }) => <StyledCenter {...rest}>{children}</StyledCenter>;
 
 const StyledCenter = styled.div`
   display: flex;
